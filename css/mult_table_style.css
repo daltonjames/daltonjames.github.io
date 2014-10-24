@@ -1,10 +1,10 @@
 /* 
-    Document   : 
+    Document   : mult_table_style.css 
     Created on : Oct 21, 2014, 3:31:25 PM
     Author     : Dalton James
     Email      : Dalton_James@student.uml.edu
     
-    Description:
+    Description: Adds css to the dynamic table and other html on the page
 */
 
 /*css reset for html5 from Jesse Heines class notes*/
@@ -43,30 +43,48 @@ table {
 }
 /*end css reset*/
 
+/*wraps each textbox and its description in a div to keep them together*/
 .form_ele{
   display: block;
+  padding-bottom: 2px;
 }
 
-.text_box{
+/*formats each box for user input*/
+.num_box{
   width: 55px;
 }
 
+/*effects spacing of the table*/
+table{
+margin-top: 30px;  
+  
+}
+
+/*changes the dynamic table and its contents*/
 table, td, th {
   border-spacing: 5px;
   border: 1px solid black;
 }
 
+/*changes the spacing of data in the table*/
 td, th {
   padding: 5px;
+  text-align: center;
 }
 
+/*changes the first row and column of the table*/
 th {
   color: white;
   background-color: black;
   border-color: white;
 }
 
-
+/*changes the top left (first) box of the table*/
 #result tr:first-child th:first-child{
   background-color: white; 
+}
+
+/*changes to error messages*/
+#error_msg{
+  color: red;
 }

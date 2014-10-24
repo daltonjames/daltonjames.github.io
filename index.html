@@ -10,8 +10,10 @@
     File: index.html
     Created: 10/21/2014
     
-    page to display the multiplication table 
-    Updated: 10/23/2014
+    Description: page to display the dynamic multiplication table and holds the 
+                 form for it
+    
+    Updated: 10/24/2014
     -->
 
     <title>Mult Table</title>
@@ -29,32 +31,42 @@
 
     <!--form to take in the size of the multiplication table -->
     <form id="m_form" action="javascript:void(0)">
+
+      <!--each of the divs encloses a label and number box pair-->
       <div class="form_ele">
-        <label>Min Horizontal Value:</label>
-        <input id="min_h" class="text_box" type="number" tabindex="1" />
+        <!--the minimum horizontal value for the table-->
+        <label>Min Horizontal Value (Column)</label>
+        <input id="min_h" class="num_box" type="number" tabindex="1" />
       </div>
 
       <div class="form_ele">
-        <label>Max Horizontal Value:</label>
-        <input id="max_h" class="text_box" type="number" tabindex="2" /> 
+        <!--the maximum horizontal value for the table-->
+        <label>Max Horizontal Value (Column)</label>
+        <input id="max_h" class="num_box" type="number" tabindex="2" /> 
       </div>
 
       <div class="form_ele">
-        <label>Min Vertical Value:</label>
-        <input id="min_v" class="text_box" type="number" tabindex="3" /> 
+        <!--the minimum vertical value for the table-->
+        <label>Min Vertical Value (Row)</label>
+        <input id="min_v" class="num_box" type="number" tabindex="3" /> 
       </div>
 
       <div class="form_ele">
-        <label>Max Vertical Value:</label>
-        <input id="max_v" class="text_box" type="number" tabindex="4" />      
+        <!--the maximum vertical value for the table-->
+        <label>Max Vertical Value (Row)</label>
+        <input id="max_v" class="num_box" type="number" tabindex="4" />      
       </div>
 
-
+      <!--the submit box to create the table-->
       <input class="submit_box" type="submit" tabindex="5" />
     </form>
     
-    
+    <!--the dynamic table to be created-->
     <table id="result"></table>
-
+    
+    <!--paragraph for errors-->
+    <p id="error_msg"></p>
+    
+    
   </body>
 </html>
